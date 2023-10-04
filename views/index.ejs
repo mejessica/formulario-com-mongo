@@ -1,0 +1,21 @@
+<%- include('partials/head') %>
+    <title>Pessoas</title>
+</head>
+
+<body>
+    <%- include('partials/video') %>
+    <div class="centro">
+        <h2 class="titulo">Pessoas cadastradas</h2>
+        <hr>
+        <ul>
+            <% for(pessoa of pessoas) { %>
+                <li class="nomes"><a href="/pessoas/<%= pessoa._id %>">
+                        <%= pessoa.nome %>
+                    </a></li>
+                <% } %>
+        </ul> <br>
+        <a href="/pessoas/new"><button class="botao-adicionar">Adicionar nova pessoa</button></a>
+    </div>
+</body>
+
+</html>

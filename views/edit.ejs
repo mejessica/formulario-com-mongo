@@ -1,0 +1,28 @@
+<%- include('partials/head') %>
+    <title>Alterar uma pessoa</title>
+</head>
+
+<body>
+    <%- include('partials/video') %>
+    <div class="centro">
+        <h2 class="alterar-pessoa">Alterar uma pessoa: </h2>
+        <form class="formulario" action="/pessoas/<%=pessoa._id%>?_method=PATCH" method="post">
+            <label for="cpf">CPF</label><br>
+            <input type="text" name="cpf" id="cpf" value="<%=pessoa.cpf%>" readonly> <br>
+            <br>
+            <label for="nome">Nome</label><br>
+            <input type="text" name="nome" id="nome" value="<%=pessoa.nome%>"> <br>
+            <br>
+            <label for="dataNasc">Nascimento<br>
+            <input type="text" name="dataNasc" id="dataNasc" value="<%=pessoa.dataNasc%>"> <br>
+            <br>
+            <label for="email">E-mail</label><br>
+            <input type="text" name="email" id="email" value="<%=pessoa.email%>"> <br><br>
+
+            <button class="botao-alterar">Alterar</button>
+        </form> <br>
+        <a href="/pessoas"><button class="botao-voltar">Voltar</button></a>
+    </div>
+</body>
+
+</html>

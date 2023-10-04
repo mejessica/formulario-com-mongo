@@ -1,0 +1,42 @@
+<%- include('partials/head') %>
+    <title>Detalhes</title>
+</head>
+
+<body>
+    <%- include('partials/video') %>
+    <div class="centro">
+        <h2>Detalhes da pessoa</h2>
+        <% if(pessoa) { %>
+            <div class="details-pessoas">
+                
+                <p><strong>Nome:</strong>
+                    <%= pessoa.nome %>
+                </p>
+                <p><strong>CPF:</strong>
+                    <%= pessoa.cpf %>
+                </p>
+                <p><strong>E-mail:</strong>
+                    <%= pessoa.email %>
+                </p>
+                <p><strong>Data de Nascimento:</strong>
+                    <%= pessoa.dataNasc %>
+                </p>
+                <br>
+                
+               <div class="botoes">
+                <a href="/pessoas/<%= pessoa._id %>/edit"><button class="botao-alterar">Alterar</button></a>
+
+                <form action="/pessoas/<%=pessoa._id%>?_method=DELETE" method="post">
+                    <button class="botao-apagar">Apagar</button>
+                </form> <br>
+               </div>
+
+                <a href="/pessoas"><button class="botao-voltar">Voltar</button></a>
+            </div>
+            <% } else { %>
+                <p>Não foi encontrado nenhuma pessoa dessa espécie!</p>
+                <% } %>
+    </div>
+</body>
+
+</html>
