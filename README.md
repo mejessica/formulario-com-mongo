@@ -48,7 +48,7 @@ node app
 ```
 Para rodar o servidor e a conexão com o banco.
 
-Agora basta abrir seu navegador preferido e digitar: http://localhost:3000 para ver o resultado!
+Agora basta abrir seu navegador preferido e digitar: http://localhost:2000 para ver o resultado!
 
 >Caso queira apenas olhar o código pode ignorar a etapa "abrir e rodar projeto"
 
