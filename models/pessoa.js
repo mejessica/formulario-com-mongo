@@ -2,9 +2,9 @@ const {mongoose} = require('../db')
 
 const pessoaSchema = new mongoose.Schema({
     nome: String,
-    email: String,
-    cpf: String,
-    dataNascimento: String,
+    email: email,
+    cpf: number,
+    dataNascimento: Date,
 })
 
 const dadosPessoa = mongoose.model("Pessoa", pessoaSchema);
